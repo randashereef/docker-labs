@@ -32,7 +32,7 @@ comment about the file hello-docker :•	comment : the file deleted because no v
         $docker container prune
   ```
   Problem 3
-  Run a container httpd with name apache and 
+•  Run a container httpd with name apache and 
 attach a volume to the container
 • Volume for containing static html file
 • Remove the container
@@ -49,7 +49,7 @@ $docker rm 7bc270cd4949
 $docker run -d --name apache -v /docker:/usr/local/apache2/htdocs -p 9898:80  httpd
 ```
 problem4
-Run the image httpd again without attaching any 
+• Run the image httpd again without attaching any 
 volumes
 • Add html static files to the container and make 
 sure they are accessible
