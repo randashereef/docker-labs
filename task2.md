@@ -1,4 +1,4 @@
-Problem1: Create MySQL database docker image with:
+Problem: Create MySQL database docker image with:
 • volume called mysql_data to /var/lib/mysql
 • Set ENV variable MYSQL_ROOT_PASSWORD to P4sSw0rd0!.
 ```
