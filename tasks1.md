@@ -24,12 +24,12 @@ comment about the file hello-docker :•	comment : the file deleted because no v
 • Remove all stopped containers
 
 ```
-	$docker run -it --name=my-ubuntu1 ubuntu:focal
-	$echo docker
-	$touch hello-docker
-	$exit
-        $docker rm 8f57d173cb68
-        $docker container prune
+$docker run -it --name=my-ubuntu1 ubuntu:focal
+$echo docker
+$touch hello-docker
+$exit
+$docker rm 8f57d173cb68
+$docker container prune
   ```
   Problem 3
 •  Run a container httpd with name apache and 
@@ -65,3 +65,14 @@ $apt-get install vim
 $vim htdocs/index.html
 $exit
 $ curl http://172.17.0.2:80
+```
+Problem 5
+• Create a volume called mysql_data, then deploy 
+a MySQL database called app-database. Use the 
+mysql latest image, and use the -e flag to 
+set MYSQL_ROOT_PASSWORD to P4sSw0rd0!.M
+ount the mysql_data volume to /var/lib/mysql. 
+The container should run in the background.
+```
+$docker run -d --name app-database -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=P4sSw0rd0! mysql
+```
